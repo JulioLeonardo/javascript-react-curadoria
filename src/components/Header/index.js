@@ -50,11 +50,11 @@ class Header extends React.Component {
             className="button"
             onClick={() => this.onSetSidebarOpen(true)}
           >
-            <img src={menu} alt="botão de menu" />
+            <img src={menu} alt="menu button" />
           </button>
         </Sidebar>
         <div className="logo">
-          <img className="logo" src={logo} alt="logo da viva decora" />
+          <img className="logo" src={logo} alt="viva decora logo" />
         </div>
       </header>
     );

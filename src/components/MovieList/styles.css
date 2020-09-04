@@ -1,0 +1,21 @@
+.movie-list {
+  background: white;
+  height: 90vh;
+  margin-top: 1.5rem;
+}
+
+.movie-list img {
+  display: block;
+  padding-top: 10px;
+  margin: auto auto;
+}
+
+.title {
+  padding: 20px;
+}
+
+.no-movie {
+  padding: 20px;
+  font-size: 1.2rem ;
+  text-align: center;
+}

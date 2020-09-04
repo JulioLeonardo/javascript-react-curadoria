@@ -1,0 +1,25 @@
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 294px;
+  padding: 20px 0;
+  margin: auto;
+}
+
+button {
+  border: none;
+}
+
+.like-dislike {
+  border-radius: 50px;
+  width: 75px;
+  height: 75px;
+}
+
+.jump {
+  border-radius: 50px;
+  width: 95px;
+  height: 60px;
+  font: 900 1rem Roboto;
+}

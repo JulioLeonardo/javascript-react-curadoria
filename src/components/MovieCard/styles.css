@@ -1,0 +1,44 @@
+#movie-card {
+  margin: auto auto;
+  background-image: url(https://image.tmdb.org/t/p/w500/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg);
+  height: 350px;
+  width: 294px;
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 4px;
+  margin-top: 40px;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #FFF;
+}
+
+.title {
+  font: 900 1.3rem "Roboto";
+  padding: 5px 0;
+}
+
+.evaluation {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  font-size: 0.9rem;
+}
+
+.hearts {
+  display: inline;
+}
+
+.synopsis {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  font-size: 0.9rem;
+}
+
+a {
+  color:rgb(204, 11, 11);
+  
+}
