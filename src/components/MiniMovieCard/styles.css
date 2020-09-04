@@ -1,0 +1,33 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+.mini-movie-card {
+  background-image: url(https://image.tmdb.org/t/p/w500/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg);
+  width: 145px;
+  height: 174px;
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.mini-card-title {
+  font-size: 0.9rem;
+  color: white;
+  padding: 5px;
+  max-width: 145px;
+}
+
+.hearts {
+  display: flex;
+  padding-right: 15px;
+}

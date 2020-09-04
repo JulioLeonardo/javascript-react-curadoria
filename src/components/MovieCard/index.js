@@ -25,7 +25,7 @@ var movie = {
 function MovieCard() {
   return (
     <div id="movie-card">
-      <p className="title">THOR: RAGNAROK</p>
+      <h1 className="movie-card-title">THOR: RAGNAROK</h1>
       <div className="evaluation">
         <div className="hearts">
           <img src={heart} alt="" />
