@@ -1,6 +1,6 @@
-import React from "./node_modules/react";
-import Sidebar from "./node_modules/react-sidebar";
-import { NavLink } from "./node_modules/react-router-dom";
+import React from "react";
+import Sidebar from "react-sidebar";
+import { NavLink } from "react-router-dom";
 
 import "./styles.css";
 import menu from "../../assets/images/menu-lateral.png";
@@ -29,10 +29,10 @@ class Header extends React.Component {
               <NavLink className="link" to="/">
                 FILMES NÃO CURADOS
               </NavLink>
-              <NavLink className="link" to="/liked">
+              <NavLink className="link" to="/LikedMovies">
                 FILMES CURTIDOS
               </NavLink>
-              <NavLink className="link" to="/disliked">
+              <NavLink className="link" to="/DislikedMovies">
                 FILMES NÃO CURTIDOS
               </NavLink>
             </div>

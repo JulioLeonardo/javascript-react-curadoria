@@ -1,9 +1,9 @@
 import React from "react";
 
 import "./styles.css"
-import Header from "../../components/header";
+import Header from "../../components/Header";
 
-function Liked() {
+function LikedMovies() {
   return (
     <div id="liked">
       <Header />
@@ -11,4 +11,4 @@ function Liked() {
   )
 }
 
-export default Liked;
+export default LikedMovies;

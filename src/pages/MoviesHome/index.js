@@ -1,9 +1,9 @@
 import React from "react";
 
 import "./styles.css"
-import Header from "../../components/header";
+import Header from "../../components/Header";
 
-function Disliked() {
+function MoviesHome() {
   return (
     <div id="movies">
       <Header />
@@ -11,4 +11,4 @@ function Disliked() {
   )
 }
 
-export default Disliked;
+export default MoviesHome;

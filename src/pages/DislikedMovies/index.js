@@ -1,18 +1,14 @@
 import React from "react";
 
-
-
 import "./styles.css"
 import Header from "../../components/Header";
-import MovieCard from "../../components/MovieCard"
 
-function Movies() {
+function Disliked() {
   return (
     <div id="movies">
       <Header />
-      <MovieCard />
     </div>
   )
 }
 
-export default Movies;
+export default Disliked;

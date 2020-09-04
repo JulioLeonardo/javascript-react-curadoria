@@ -1,17 +1,17 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import movies from "./pages/movies"
-import liked from "./pages/liked"
-import disliked from "./pages/disliked"
+import MoviesHome from "./pages/MoviesHome"
+import LikedMovies from "./pages/LikedMovies"
+import DislikedMovies from "./pages/DislikedMovies"
 
 
 function Routes() {
   return (
     <BrowserRouter>
-      <Route path="/" component={movies} exact />
-      <Route path="/liked" component={liked} />
-      <Route path="/disliked" component={disliked} />
+      <Route path="/" component={MoviesHome} exact />
+      <Route path="/LikedMovies" component={LikedMovies} />
+      <Route path="/DislikedMovies" component={DislikedMovies} />
     </BrowserRouter>
   )
 }
