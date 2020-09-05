@@ -1,0 +1,101 @@
+
+#synopsis-card {
+  height: 100vh;
+    width: 100vw;
+    background-color: #0e0a149f;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+
+    transition: 400ms;
+}
+
+.content-top {
+  background-color: #FF5656;
+  width: 305px;
+  height: 530px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.content-top #close {
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+  position: absolute;
+  top: -10px;
+  right: -6px;
+  font-size: 25px;
+  color: #666666;
+}
+
+.content-top img {
+  display: block;
+  width: 135px;
+  height: 150px;
+  border-radius: 6px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 35px;
+  overflow: hidden;
+}
+
+.content-main {
+  background-color: white;
+  height: 420px;
+  border-radius: 0 0 8px 8px;
+  justify-content: center;
+  align-items: center;
+  margin-top: -4.5rem;
+}
+
+.content-main .synopsis-title {
+  padding-top: 80px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.content-main .synopsis-info { 
+  text-align: center;
+  max-width: 260px;
+  margin: auto;
+  color: #a7a6a6;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.content-main .hearts {
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+.content-main .hearts img {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+}
+
+.content-main .synopsis-reviews {
+  text-align: center;
+  padding-top: 0;
+  padding-bottom: 10px;
+  color: #a7a6a6;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.content-main .synopsis-content {
+  max-width: 260px;
+  text-align: left;
+  margin: auto;
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 20px;
+}
+
