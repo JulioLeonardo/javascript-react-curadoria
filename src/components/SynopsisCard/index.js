@@ -1,14 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import "./styles.css";
 import heart from "../../assets/images/favorite.png";
 
 
-function SynopsisCard() {
+function SynopsisCard(props) {
+
+  const [showSynopsis, setShowSynopsis] = useState(false);
+
+  const handleClose = () => {
+    setShowSynopsis(false)
+    props.status()
+    
+
+  }
+
+  useEffect(()=>{
+    setShowSynopsis(props.call)
+
+    
+    
+  },[props.call])
+
+  
   return (
+    showSynopsis &&
     <div id="synopsis-card" className="hide">
       <div className="content-top">
-        <button id="close">X</button>
+        <button onClick={handleClose} id="close">X</button>
         <img
           src="https://image.tmdb.org/t/p/w500/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg"
           alt=""

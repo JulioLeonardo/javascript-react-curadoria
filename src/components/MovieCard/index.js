@@ -26,6 +26,14 @@ var movie = {
 function MovieCard() {
   const [showSynopsis, setShowSynopsis] = useState(false);
 
+  const handleShowSynopsis = () => {
+    setShowSynopsis(true)
+  }
+
+  const childHandleClose = () => {
+    setShowSynopsis(false)
+  }
+  
   return (
     <>
       <div id="movie-card">
@@ -45,12 +53,12 @@ function MovieCard() {
 
         <div className="synopsis">
           <p>Sinopse aqui...</p>
-          <button onclick={() => setShowSynopsis(true)} id="show-synopsis">
+          <button onClick={handleShowSynopsis} id="show-synopsis">
             Ver Sinopse
           </button>
         </div>
       </div>
-      {showSynopsis && <SynopsisCard />}
+      <SynopsisCard call={showSynopsis} status={childHandleClose} />
     </>
   );
 }
