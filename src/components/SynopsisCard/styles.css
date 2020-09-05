@@ -10,7 +10,24 @@
     align-items: center;
     z-index: 2;
 
-    transition: 400ms;
+    animation: fadeInFromNone 0.3s ease-in;
+}
+
+@keyframes fadeInFromNone {
+  0% {
+      display: none;
+      opacity: 0;
+  }
+
+  1% {
+      display: block;
+      opacity: 0;
+  }
+
+  100% {
+      display: block;
+      opacity: 1;
+  }
 }
 
 .content-top {
