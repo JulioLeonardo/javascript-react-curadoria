@@ -5,7 +5,7 @@ import camera from '../../assets/images/video-camera-vazio.png';
 import SynopsisCard from '../SynopsisCard';
 import ButtonGroup from '../ButtonGroup';
 import api from '../../services/api';
-import HeartsContainer from '../HeartsContainer';
+// import HeartsContainer from '../HeartsContainer';
 
 function MovieCard() {
   const [showSynopsis, setShowSynopsis] = useState(false);
@@ -45,38 +45,31 @@ function MovieCard() {
   };
   const stars = fetched && moviesFetch[0].vote_average;
 
+  if (!fetched) {
+    return <img id="no-movie" src={camera} alt="no-movie" />;
+  }
   return (
     <>
-      {fetched === false ? (
-        <img id="no-movie" src={camera} alt="no-movie" />
-      ) : (
-        <>
-          <div id="movie-card" style={background}>
-            <h1 className="movie-card-title">{title}</h1>
-            <div className="evaluation">
-              <div className="hearts">
-                {fetched && <HeartsContainer stars={stars} />}
-              </div>
-              <div className="reviews">
-                <p>({votes} avaliações)</p>
-              </div>
-            </div>
-
-            <div className="synopsis">
-              <p>{shortSynopsis}...</p>
-              <button
-                type="button"
-                onClick={handleShowSynopsis}
-                id="show-synopsis"
-              >
-                Ver Sinopse
-              </button>
-            </div>
+      <div id="movie-card" style={background}>
+        <h1 className="movie-card-title">{title}</h1>
+        <div className="evaluation">
+          <div className="hearts">
+            {/* {fetched && <HeartsContainer stars={stars} />} */}
           </div>
-          <SynopsisCard call={showSynopsis} status={childHandleClose} />
-          <ButtonGroup />
-        </>
-      )}
+          <div className="reviews">
+            <p>({votes} avaliações)</p>
+          </div>
+        </div>
+
+        <div className="synopsis">
+          <p>{shortSynopsis}...</p>
+          <button type="button" onClick={handleShowSynopsis} id="show-synopsis">
+            Ver Sinopse
+          </button>
+        </div>
+      </div>
+      <SynopsisCard call={showSynopsis} status={childHandleClose} />
+      <ButtonGroup />
     </>
   );
 }

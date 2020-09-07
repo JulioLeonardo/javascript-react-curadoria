@@ -3,7 +3,6 @@ import React from 'react';
 import './styles.css';
 import heart from '../../assets/images/favorite.png';
 import empty from '../../assets/images/favorite_.png';
-import { render } from '@testing-library/react';
 
 function HeartsContainer(props) {
   const { stars } = props;
@@ -64,23 +63,32 @@ function HeartsContainer(props) {
     </>
   );
 
-render() {
-  switch (stars) {
-    case stars <= 2:
-      return <OneStar />;
-    case stars <= 4:
-      return <TwoStars />;
-    case stars <= 6:
-      return <ThreeStars />;
-    case stars <= 8:
-      return <FourStars />;
-    case stars <= 10:
-      return <FiveStars />;
-    default:
-      return <NoStar />;
+  function sky() {
+    switch (stars) {
+      case stars <= 2:
+        <OneStar />;
+        break;
+      case stars <= 4:
+        <TwoStars />;
+        break;
+      case stars <= 6:
+        <ThreeStars />;
+        break;
+      case stars <= 8:
+        <FourStars />;
+        break;
+      case stars <= 10:
+        <FiveStars />;
+        break;
+      default:
+        <NoStar />;
+        break;
+    }
   }
 
-}
+  const result = sky(stars);
+
+  return result;
 }
 
 export default HeartsContainer;
