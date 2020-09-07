@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import "./styles.css";
-import heart from "../../assets/images/favorite.png";
+import './styles.css';
+import heart from '../../assets/images/favorite.png';
 
 function MiniMovieCard() {
   return (

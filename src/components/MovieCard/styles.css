@@ -1,6 +1,6 @@
 #movie-card {
   margin: auto auto;
-  background-image: url(https://image.tmdb.org/t/p/w500/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg);
+  /* background-image: linear-gradient(to bottom, rgba(141, 141, 141, 0), rgba(3, 3, 3, 0.692)); */
   height: 350px;
   width: 294px;
   background-position: center; 
@@ -15,6 +15,10 @@
   color: #FFF;
 }
 
+#movie-card:after {
+  background: #444;
+}
+
 .movie-card-title {
   font: 900 1.3rem "Roboto";
   padding: 5px 0;
@@ -27,6 +31,15 @@
   font-size: 0.9rem;
 }
 
+#no-movie {
+  margin-top: 50px;
+  margin-left: 17px;
+  background: white;
+  padding: 10px;
+  border-radius: 50px;
+  
+}
+
 .hearts {
   display: inline;
 }
@@ -36,6 +49,10 @@
   justify-content: space-between;
   padding: 5px 0;
   font-size: 0.9rem;
+}
+
+.synopsis p {
+  max-width: 200px;
 }
 
 #show-synopsis {

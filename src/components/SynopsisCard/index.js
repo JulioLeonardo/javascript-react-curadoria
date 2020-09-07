@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/prop-types */
+import React, { useState, useEffect } from 'react';
 
-import "./styles.css";
-import heart from "../../assets/images/favorite.png";
+import './styles.css';
+import heart from '../../assets/images/favorite.png';
 
 function SynopsisCard(props) {
   const [showSynopsis, setShowSynopsis] = useState(false);
@@ -18,7 +20,7 @@ function SynopsisCard(props) {
     showSynopsis && (
       <div id="synopsis-card" className="hide">
         <div className="content-top">
-          <button onClick={handleClose} id="close">
+          <button type="button" onClick={handleClose} id="close">
             X
           </button>
           <img

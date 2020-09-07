@@ -1,10 +1,11 @@
-import React from "react";
-import Sidebar from "react-sidebar";
-import { NavLink } from "react-router-dom";
+/* eslint-disable react/destructuring-assignment */
+import React from 'react';
+import Sidebar from 'react-sidebar';
+import { NavLink } from 'react-router-dom';
 
-import "./styles.css";
-import menu from "../../assets/images/menu-lateral.png";
-import logo from "../../assets/images/logo-viva-decora.png";
+import './styles.css';
+import menu from '../../assets/images/menu-lateral.png';
+import logo from '../../assets/images/logo-viva-decora.png';
 
 class Header extends React.Component {
   constructor(props) {
@@ -41,12 +42,13 @@ class Header extends React.Component {
           onSetOpen={this.onSetSidebarOpen}
           styles={{
             sidebar: {
-              background: "#444444",
-              transition: "transform .3s ease-out",
+              background: '#444444',
+              transition: 'transform .3s ease-out',
             },
           }}
         >
           <button
+            type="button"
             className="button"
             onClick={() => this.onSetSidebarOpen(true)}
           >
