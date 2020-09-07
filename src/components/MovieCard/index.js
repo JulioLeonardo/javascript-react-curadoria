@@ -17,7 +17,7 @@ function MovieCard() {
     const movies = await api.get();
     setMoviesFetch(movies.data.results);
     setFetched(true);
-    // console.log(moviesFetch);
+    console.log(movies.data);
   }
 
   useEffect(() => {
@@ -34,7 +34,9 @@ function MovieCard() {
   };
 
   const title = fetched && moviesFetch[0].original_title;
-  const votes = fetched && moviesFetch[0].vote_count;
+  const year = fetched && moviesFetch[0].release_date.slice(0, 4);
+  const reviews = fetched && moviesFetch[0].vote_count;
+  const synopsis = fetched && moviesFetch[0].overview;
   const shortSynopsis = fetched && moviesFetch[0].overview.slice(0, 100);
   const bgImage =
     fetched && `https://image.tmdb.org/t/p/w500/${moviesFetch[0].poster_path}`;
@@ -43,10 +45,22 @@ function MovieCard() {
       'linear-gradient(to bottom, rgba(141, 141, 141, 0), rgba(3, 3, 3, 0.692)),' +
       `url(${bgImage})`,
   };
+  // const appBgImage =
+  //   fetched &&
+  //   `https://image.tmdb.org/t/p/w500/${moviesFetch[0].backdrop_path}`;
+  // const appBackground = {
+  //   backgroundImage:
+  //     'linear-gradient(to right, rgba(255,28,28,1), rgba(255,86,86,0.6)),' +
+  //     `url(${appBgImage})`,
+  // };
   const stars = fetched && moviesFetch[0].vote_average;
 
   if (!fetched) {
-    return <img id="no-movie" src={camera} alt="no-movie" />;
+    return (
+      <div className="no-movie-div">
+        <img id="no-movie" src={camera} alt="no-movie" />
+      </div>
+    );
   }
   return (
     <>
@@ -57,7 +71,7 @@ function MovieCard() {
             {/* {fetched && <HeartsContainer stars={stars} />} */}
           </div>
           <div className="reviews">
-            <p>({votes} avaliações)</p>
+            <p>({reviews} avaliações)</p>
           </div>
         </div>
 
@@ -68,7 +82,15 @@ function MovieCard() {
           </button>
         </div>
       </div>
-      <SynopsisCard call={showSynopsis} status={childHandleClose} />
+      <SynopsisCard
+        image={bgImage}
+        title={title}
+        year={year}
+        synopsis={synopsis}
+        reviews={reviews}
+        call={showSynopsis}
+        status={childHandleClose}
+      />
       <ButtonGroup />
     </>
   );

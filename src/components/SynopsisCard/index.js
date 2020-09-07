@@ -23,14 +23,11 @@ function SynopsisCard(props) {
           <button type="button" onClick={handleClose} id="close">
             X
           </button>
-          <img
-            src="https://image.tmdb.org/t/p/w500/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg"
-            alt=""
-          />
+          <img src={props.image} alt="poster" />
           <div className="content-main">
-            <h1 className="synopsis-title">THOR: RAGNAROK</h1>
+            <h1 className="synopsis-title">{props.title}</h1>
             <p className="synopsis-info">
-              2017 - FANTASY/SCIENCE FICTION FILM - 2H 21M
+              {props.year} - FANTASY/SCIENCE FICTION FILM - 2H 21M
             </p>
             <div className="hearts">
               <img src={heart} alt="" />
@@ -40,16 +37,10 @@ function SynopsisCard(props) {
               <img src={heart} alt="" />
             </div>
             <div className="synopsis-reviews">
-              <p>(120 avaliações)</p>
+              <p>({props.reviews} avaliações)</p>
             </div>
             <div className="synopsis-content">
-              <p>
-                Thor is imprisoned on the other side of the universe and finds
-                himself in a race against time to get back to Asgard to stop
-                Ragnarok, the destruction of his home-world and the end of
-                Asgardian civilization, at the hands of an all-powerful new
-                threat, the ruthless Hela.
-              </p>
+              <p>{props.synopsis}</p>
             </div>
           </div>
         </div>
