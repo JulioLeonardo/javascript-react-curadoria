@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from 'react';
 
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+import * as SynopsisActions from '../../store/actions/synopsis';
+
 import './styles.css';
 import camera from '../../assets/images/video-camera-vazio.png';
 import SynopsisCard from '../SynopsisCard';
 import ButtonGroup from '../ButtonGroup';
 import api from '../../services/api';
-// import HeartsContainer from '../HeartsContainer';
+import HeartsContainer from '../HeartsContainer';
 
-function MovieCard() {
+function MovieCard({isSynopsisActive, toggleSynopsis}) {
   const [showSynopsis, setShowSynopsis] = useState(false);
   const [moviesFetch, setMoviesFetch] = useState([]);
   const [fetched, setFetched] = useState(false);
@@ -26,11 +31,7 @@ function MovieCard() {
   moviesList.push(moviesFetch);
 
   const handleShowSynopsis = () => {
-    setShowSynopsis(true);
-  };
-
-  const childHandleClose = () => {
-    setShowSynopsis(false);
+    toggleSynopsis(true)
   };
 
   const title = fetched && moviesFetch[0].original_title;
@@ -68,7 +69,7 @@ function MovieCard() {
         <h1 className="movie-card-title">{title}</h1>
         <div className="evaluation">
           <div className="hearts">
-            {/* {fetched && <HeartsContainer stars={stars} />} */}
+            {fetched && <HeartsContainer stars={stars} />}
           </div>
           <div className="reviews">
             <p>({reviews} avaliações)</p>
@@ -88,12 +89,18 @@ function MovieCard() {
         year={year}
         synopsis={synopsis}
         reviews={reviews}
-        call={showSynopsis}
-        status={childHandleClose}
       />
       <ButtonGroup />
     </>
   );
 }
 
-export default MovieCard;
+const mapStateToProps = state => ({
+  isSynopsisActive: state.synopsis.isSynopsisActive
+});
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(SynopsisActions, dispatch)
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(MovieCard);
