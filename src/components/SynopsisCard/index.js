@@ -2,6 +2,11 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
 
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+import * as SynopsisActions from '../../store/actions/synopsis';
+
 import './styles.css';
 import heart from '../../assets/images/favorite.png';
 
@@ -9,12 +14,12 @@ function SynopsisCard(props) {
   const [showSynopsis, setShowSynopsis] = useState(false);
 
   const handleClose = () => {
-    props.status();
+    props.toggleSynopsis(false);
   };
 
   useEffect(() => {
-    setShowSynopsis(props.call);
-  }, [props.call]);
+    setShowSynopsis(props.isSynopsisActive);
+  });
 
   return (
     showSynopsis && (
@@ -49,4 +54,11 @@ function SynopsisCard(props) {
   );
 }
 
-export default SynopsisCard;
+const mapStateToProps = state => ({
+  isSynopsisActive: state.synopsis.isSynopsisActive
+});
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(SynopsisActions, dispatch)
+
+export default connect(mapStateToProps, mapDispatchToProps)(SynopsisCard);
