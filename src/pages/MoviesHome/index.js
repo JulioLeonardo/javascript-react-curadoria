@@ -7,6 +7,7 @@ import MovieCard from '../../components/MovieCard';
 function MoviesHome() {
   return (
     <div id="movies">
+      {console.log('Variavel de ambiente', process.env.REACT_APP_THE_MOVIE_DB_API_KEY)}
       <Header />
       <MovieCard />
     </div>
