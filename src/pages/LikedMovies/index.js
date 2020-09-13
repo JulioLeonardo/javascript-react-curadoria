@@ -6,9 +6,9 @@ import MovieList from '../../components/MovieList';
 
 function LikedMovies() {
   return (
-    <div id="movies">
+    <div id="liked-movies">
       <Header />
-      <MovieList />
+      <MovieList title="FILMES CURTIDOS" />
     </div>
   );
 }

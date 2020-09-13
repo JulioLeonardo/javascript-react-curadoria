@@ -6,9 +6,9 @@ import MovieList from '../../components/MovieList';
 
 function Disliked() {
   return (
-    <div id="movies">
+    <div id="disliked-movies">
       <Header />
-      <MovieList />
+      <MovieList title="FILMES NÃO CURTIDOS" />
     </div>
   );
 }

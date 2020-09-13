@@ -1,7 +1,6 @@
 .movie-list {
   background: white;
   height: 90vh;
-  margin-top: 1.5rem;
 }
 
 .movie-list img {
@@ -11,7 +10,9 @@
 }
 
 .movie-list-title {
+  font-size: 1.3rem;
   padding: 20px;
+  font-weight: 900;
 }
 
 .no-movie {

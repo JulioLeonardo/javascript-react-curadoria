@@ -4,10 +4,10 @@ import './styles.css';
 import noMovie from '../../assets/images/video-camera-vazio.png';
 import MiniMovieCard from '../MiniMovieCard';
 
-function MovieList() {
+function MovieList({ title }) {
   return (
     <div className="movie-list">
-      <h1 className="movie-list-title">FILMES CURTIDOS</h1>
+      <h1 className="movie-list-title">{title}</h1>
       {false ? (
         <>
           <img src={noMovie} alt="" />
