@@ -11,10 +11,5 @@ html, body, #root {
 }
 
 #root {
-  background-image: linear-gradient(to right, rgba(255,28,28,1), rgba(255,86,86,0.6)), url(https://image.tmdb.org/t/p/w500/kaIfm5ryEOwYg8mLbq8HkPuM1Fo.jpg);
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: #666666;
 }

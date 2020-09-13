@@ -30,14 +30,7 @@ function MovieCard({ toggleSynopsis, movies }) {
       `url(${bgImage})`,
   };
   const stars = movies[0].vote_average;
-  // const appBgImage =
-  //   fetched &&
-  //   `https://image.tmdb.org/t/p/w500/${moviesFetch[0].backdrop_path}`;
-  // const appBackground = {
-  //   backgroundImage:
-  //     'linear-gradient(to right, rgba(255,28,28,1), rgba(255,86,86,0.6)),' +
-  //     `url(${appBgImage})`,
-  // };
+  
 
   if (movies.length === 0) {
     return (
