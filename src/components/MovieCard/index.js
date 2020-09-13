@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+/* eslint-disable react/prop-types */
+import React from 'react';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -9,43 +10,26 @@ import './styles.css';
 import camera from '../../assets/images/video-camera-vazio.png';
 import SynopsisCard from '../SynopsisCard';
 import ButtonGroup from '../ButtonGroup';
-import api from '../../services/api';
 import HeartsContainer from '../HeartsContainer';
 
-function MovieCard({isSynopsisActive, toggleSynopsis}) {
-  const [showSynopsis, setShowSynopsis] = useState(false);
-  const [moviesFetch, setMoviesFetch] = useState([]);
-  const [fetched, setFetched] = useState(false);
-  const moviesList = [];
-
-  async function fetchMovies() {
-    const movies = await api.get();
-    setMoviesFetch(movies.data.results);
-    setFetched(true);
-    console.log(movies.data);
-  }
-
-  useEffect(() => {
-    fetchMovies();
-  }, []);
-  moviesList.push(moviesFetch);
-
+// eslint-disable-next-line react/prop-types
+function MovieCard({ toggleSynopsis, movies }) {
   const handleShowSynopsis = () => {
-    toggleSynopsis(true)
+    toggleSynopsis(true);
   };
 
-  const title = fetched && moviesFetch[0].original_title;
-  const year = fetched && moviesFetch[0].release_date.slice(0, 4);
-  const reviews = fetched && moviesFetch[0].vote_count;
-  const synopsis = fetched && moviesFetch[0].overview;
-  const shortSynopsis = fetched && moviesFetch[0].overview.slice(0, 100);
-  const bgImage =
-    fetched && `https://image.tmdb.org/t/p/w500/${moviesFetch[0].poster_path}`;
+  const title = movies[0].original_title;
+  const year = movies[0].release_date.slice(0, 4);
+  const reviews = movies[0].vote_count;
+  const synopsis = movies[0].overview;
+  const shortSynopsis = movies[0].overview.slice(0, 100);
+  const bgImage = `https://image.tmdb.org/t/p/w500/${movies[0].poster_path}`;
   const background = {
     backgroundImage:
       'linear-gradient(to bottom, rgba(141, 141, 141, 0), rgba(3, 3, 3, 0.692)),' +
       `url(${bgImage})`,
   };
+  const stars = movies[0].vote_average;
   // const appBgImage =
   //   fetched &&
   //   `https://image.tmdb.org/t/p/w500/${moviesFetch[0].backdrop_path}`;
@@ -54,9 +38,8 @@ function MovieCard({isSynopsisActive, toggleSynopsis}) {
   //     'linear-gradient(to right, rgba(255,28,28,1), rgba(255,86,86,0.6)),' +
   //     `url(${appBgImage})`,
   // };
-  const stars = fetched && moviesFetch[0].vote_average;
 
-  if (!fetched) {
+  if (movies.length === 0) {
     return (
       <div className="no-movie-div">
         <img id="no-movie" src={camera} alt="no-movie" />
@@ -69,7 +52,7 @@ function MovieCard({isSynopsisActive, toggleSynopsis}) {
         <h1 className="movie-card-title">{title}</h1>
         <div className="evaluation">
           <div className="hearts">
-            {fetched && <HeartsContainer stars={stars} />}
+            <HeartsContainer stars={stars} />
           </div>
           <div className="reviews">
             <p>({reviews} avaliações)</p>
@@ -87,6 +70,7 @@ function MovieCard({isSynopsisActive, toggleSynopsis}) {
         image={bgImage}
         title={title}
         year={year}
+        stars={stars}
         synopsis={synopsis}
         reviews={reviews}
       />
@@ -95,12 +79,12 @@ function MovieCard({isSynopsisActive, toggleSynopsis}) {
   );
 }
 
-const mapStateToProps = state => ({
-  isSynopsisActive: state.synopsis.isSynopsisActive
+const mapStateToProps = (state) => ({
+  isSynopsisActive: state.synopsis.isSynopsisActive,
+  movies: state.handleMovies.movies,
 });
 
-const mapDispatchToProps = dispatch =>
-  bindActionCreators(SynopsisActions, dispatch)
-
+const mapDispatchToProps = (dispatch) =>
+  bindActionCreators(SynopsisActions, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(MovieCard);

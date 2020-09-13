@@ -3,13 +3,12 @@ const INITIAL_STATE = {
 };
 
 function synopsis(state = INITIAL_STATE, action) {
-  
   switch (action.type) {
-    case "TOGGLE_SYNOPSIS":
+    case 'TOGGLE_SYNOPSIS':
       return {
-        isSynopsisActive: action.synopsisStatus
-      }
-  
+        isSynopsisActive: action.synopsisStatus,
+      };
+
     default:
       return state;
   }

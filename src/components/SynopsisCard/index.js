@@ -1,6 +1,6 @@
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prop-types */
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -8,21 +8,15 @@ import { bindActionCreators } from 'redux';
 import * as SynopsisActions from '../../store/actions/synopsis';
 
 import './styles.css';
-import heart from '../../assets/images/favorite.png';
+import HeartsContainer from '../HeartsContainer';
 
 function SynopsisCard(props) {
-  const [showSynopsis, setShowSynopsis] = useState(false);
-
   const handleClose = () => {
     props.toggleSynopsis(false);
   };
 
-  useEffect(() => {
-    setShowSynopsis(props.isSynopsisActive);
-  });
-
   return (
-    showSynopsis && (
+    props.isSynopsisActive && (
       <div id="synopsis-card" className="hide">
         <div className="content-top">
           <button type="button" onClick={handleClose} id="close">
@@ -35,11 +29,7 @@ function SynopsisCard(props) {
               {props.year} - FANTASY/SCIENCE FICTION FILM - 2H 21M
             </p>
             <div className="hearts">
-              <img src={heart} alt="" />
-              <img src={heart} alt="" />
-              <img src={heart} alt="" />
-              <img src={heart} alt="" />
-              <img src={heart} alt="" />
+              <HeartsContainer stars={props.stars} black="black" />
             </div>
             <div className="synopsis-reviews">
               <p>({props.reviews} avaliações)</p>
@@ -54,11 +44,11 @@ function SynopsisCard(props) {
   );
 }
 
-const mapStateToProps = state => ({
-  isSynopsisActive: state.synopsis.isSynopsisActive
+const mapStateToProps = (state) => ({
+  isSynopsisActive: state.synopsis.isSynopsisActive,
 });
 
-const mapDispatchToProps = dispatch =>
-  bindActionCreators(SynopsisActions, dispatch)
+const mapDispatchToProps = (dispatch) =>
+  bindActionCreators(SynopsisActions, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(SynopsisCard);

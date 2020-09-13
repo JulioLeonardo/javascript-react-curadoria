@@ -98,6 +98,10 @@
   margin: 5px;
 }
 
+.black {
+  filter: invert(100%)
+}
+
 .content-main .synopsis-reviews {
   text-align: center;
   padding-top: 0;
