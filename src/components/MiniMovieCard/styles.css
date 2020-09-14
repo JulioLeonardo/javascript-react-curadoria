@@ -1,9 +1,3 @@
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-
 .mini-movie-card {
   background-image: url(https://image.tmdb.org/t/p/w500/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg);
   width: 145px;

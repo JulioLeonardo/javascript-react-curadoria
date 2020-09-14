@@ -11,7 +11,7 @@ import * as buttonActions from '../../store/actions/buttonActions';
 import dislike from '../../assets/images/n-curti.png';
 import like from '../../assets/images/curti.png';
 
-function ButtonGroup({ setDisliked, setJumped, setLiked, movies, liked, disliked }) {
+function ButtonGroup({ setDisliked, setJumped, setLiked, movies }) {
   const handleJump = () => {
     return setJumped(movies[0]);
   };
@@ -21,7 +21,7 @@ function ButtonGroup({ setDisliked, setJumped, setLiked, movies, liked, disliked
   const handleDislike = () => {
     return setDisliked(movies[0]);
   };
-  console.log('liked', liked, 'dis', disliked, movies)
+
   return (
     <div className="button-group">
       <button onClick={handleDislike} type="button" className="like-dislike">
