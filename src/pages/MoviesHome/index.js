@@ -8,6 +8,15 @@ import MovieCard from '../../components/MovieCard';
 
 function MoviesHome({ movies }) {
 
+  if(movies[0] === undefined) {
+    return (
+      <div id="movies-end">
+        <Header />
+        <MovieCard />
+      </div>
+    );
+  }
+
   const appBgImage =
     `https://image.tmdb.org/t/p/w500/${movies[0].backdrop_path}`;
   const appBackground = {
@@ -16,7 +25,6 @@ function MoviesHome({ movies }) {
       `url(${appBgImage})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    
   };
   return (
     <div id="movies" style={appBackground}>

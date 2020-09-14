@@ -17,6 +17,15 @@ function MovieCard({ toggleSynopsis, movies }) {
   const handleShowSynopsis = () => {
     toggleSynopsis(true);
   };
+  
+  if (movies.length === 0 || undefined) {
+    return (
+      <div className="no-movie-div">
+        <img id="no-movie" src={camera} alt="no-movie" />
+        <h1 className="no-movie-title">SEM FILMES PARA EXIBIR</h1>
+      </div>
+    );
+  }
 
   const title = movies[0].original_title;
   const year = movies[0].release_date.slice(0, 4);
@@ -32,13 +41,6 @@ function MovieCard({ toggleSynopsis, movies }) {
   const stars = movies[0].vote_average;
   
 
-  if (movies.length === 0) {
-    return (
-      <div className="no-movie-div">
-        <img id="no-movie" src={camera} alt="no-movie" />
-      </div>
-    );
-  }
   return (
     <>
       <div id="movie-card" style={background}>
