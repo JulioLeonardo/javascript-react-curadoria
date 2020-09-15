@@ -48,9 +48,9 @@
     padding-bottom: 1.5rem;
   }
 
-  .logo {
-    padding-top: 10px;
-    padding-bottom: 10px;
+  .logo img {
+    height: 30px;
+    margin-bottom: 10px;
   }
 
   .navLinks {
@@ -63,12 +63,14 @@
   .link {
     padding: 0;
     margin: 0 60px;
+    margin-bottom: 0;
     text-decoration: none;
     font-size: 0.8rem;
     font-weight: 100;
   }
 
   .active {
+    font-weight: 900;
     border-bottom: 5px solid white;
   }
 }
