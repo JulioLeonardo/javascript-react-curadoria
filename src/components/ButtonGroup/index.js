@@ -26,12 +26,14 @@ function ButtonGroup({ setDisliked, setJumped, setLiked, movies }) {
     <div className="button-group">
       <button onClick={handleDislike} type="button" className="like-dislike">
         <img src={dislike} alt="dislike" />
+        <p className="label">NÃO CURTI!</p>
       </button>
       <button onClick={handleJump} type="button" className="jump">
         <p>PULAR</p>
       </button>
       <button onClick={handleLike} type="button" className="like-dislike">
-        <img src={like} alt="dislike" />
+        <img src={like} alt="like" />
+        <p className="label liked">CURTI!</p>
       </button>
     </div>
   );

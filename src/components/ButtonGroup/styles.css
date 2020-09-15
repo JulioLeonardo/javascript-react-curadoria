@@ -7,9 +7,10 @@
   margin: auto;
 }
 
-button {
+.button-group button {
   border: none;
   z-index: 1;
+  color: #575757 !important;
 }
 
 .like-dislike {
@@ -23,4 +24,37 @@ button {
   width: 95px;
   height: 60px;
   font: 900 1rem Roboto;
+}
+
+.label {
+  display: none;
+}
+
+@media only screen and (min-width: 321px) {
+  .button-group {
+    width: 680px;
+    justify-content: space-evenly;
+  }
+
+  .label {
+    display: initial;
+  }
+
+  .like-dislike {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    font-size: 1.1rem;
+    font-weight: 900;
+  }
+
+  .like-dislike img {
+    margin-right: 15px;
+  }
+
+  .like-dislike .liked {
+    color: #f23e3b;
+  }
 }
