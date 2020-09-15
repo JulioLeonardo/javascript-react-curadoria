@@ -8,7 +8,9 @@ function MiniMovieCard({ movie }) {
   console.log(movie);
   console.log(movie.poster_path);
   const background = {
-    backgroundImage: `url(${bgImage})`,
+    backgroundImage:
+      'linear-gradient(to bottom, rgba(141, 141, 141, 0), rgba(3, 3, 3, 0.692)),' +
+      `url(${bgImage})`,
     width: '145px',
     height: '174px',
     backgroundPosition: 'center',
