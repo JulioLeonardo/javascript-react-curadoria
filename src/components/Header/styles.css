@@ -43,7 +43,7 @@
   }
 
   .page-header-desktop {
-    display: initial;
+    display: block;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }
@@ -65,7 +65,7 @@
     font-weight: 100;
   }
 
-  .link a:active {
+  /* .link a:active {
     text-decoration: underline;
-  }
+  } */
 }
