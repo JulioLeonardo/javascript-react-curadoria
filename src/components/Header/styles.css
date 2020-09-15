@@ -4,6 +4,10 @@
   display: grid;
 }
 
+.page-header-desktop {
+  display: none;
+}
+
 .navLinks {
   margin-top: 200px;
   font-weight: 900;
@@ -33,3 +37,35 @@
   margin-left: 20px;
 }
 
+@media only screen and (min-width: 321px) {
+  .page-header {
+    display: none;
+  }
+
+  .page-header-desktop {
+    display: initial;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .logo {
+    padding-top: 10px;
+  }
+
+  .navLinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .link {
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 100;
+  }
+
+  .link a:active {
+    text-decoration: underline;
+  }
+}
