@@ -14,7 +14,9 @@ function MovieList({ title, movies }) {
           <h1 className="no-movie">NENHUM FILME</h1>
         </>
       ) : (
-        movies.map((movie, i) => <MiniMovieCard key={i} movie={movie} />)
+        <div className="container">
+          {movies.map((movie, i) => <MiniMovieCard key={i} movie={movie} />)}
+        </div> 
       )}
     </div>
   );
