@@ -17,7 +17,7 @@ function MovieCard({ toggleSynopsis, movies }) {
   const handleShowSynopsis = () => {
     toggleSynopsis(true);
   };
-  
+
   if (movies.length === 0 || undefined) {
     return (
       <div className="no-movie-div">
@@ -27,7 +27,7 @@ function MovieCard({ toggleSynopsis, movies }) {
     );
   }
 
-  const title = movies[0].original_title;
+  const title = movies[0].original_title.toUpperCase();
   const year = movies[0].release_date.slice(0, 4);
   const reviews = movies[0].vote_count;
   const synopsis = movies[0].overview;
@@ -39,21 +39,24 @@ function MovieCard({ toggleSynopsis, movies }) {
       `url(${bgImage})`,
   };
   const stars = movies[0].vote_average;
-  
 
   return (
     <>
       <div id="movie-card" style={background}>
-        <h1 className="movie-card-title">{title}</h1>
-        <div className="evaluation">
-          <div className="hearts">
-            <HeartsContainer stars={stars} />
-          </div>
-          <div className="reviews">
-            <p>({reviews} avaliações)</p>
+        <div className="title-evaluation">
+          <h1 className="movie-card-title">{title}</h1>
+          <div className="evaluation">
+            <div className="hearts">
+              <HeartsContainer stars={stars} />
+            </div>
+            <div className="reviews">
+              <p>({reviews} avaliações)</p>
+            </div>
           </div>
         </div>
-
+        <p className="mc-synopsis-info">
+          {year} - FANTASY/SCIENCE FICTION FILM - 2H 21M
+        </p>
         <div className="synopsis">
           <p>{shortSynopsis}...</p>
           <button type="button" onClick={handleShowSynopsis} id="show-synopsis">

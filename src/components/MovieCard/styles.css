@@ -18,6 +18,10 @@
   background: #444;
 }
 
+.mc-synopsis-info {
+  display: none;
+}
+
 .movie-card-title {
   font: 900 1.3rem 'Roboto';
   padding: 5px 0;
@@ -82,5 +86,26 @@
   #movie-card {
     width: 700px;
     height: 460px;
+  }
+
+  .mc-synopsis-info {
+    display: initial;
+  }
+
+  .title-evaluation {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .title-evaluation .evaluation {
+    flex-direction: column;
+  }
+
+  .movie-card-title {
+    font-size: 1.7rem;
+  }
+
+  .synopsis p {
+    max-width: 600px;
   }
 }
