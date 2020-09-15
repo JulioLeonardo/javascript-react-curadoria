@@ -50,6 +50,7 @@
 
   .logo {
     padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .navLinks {
@@ -60,12 +61,14 @@
   }
 
   .link {
+    padding: 0;
+    margin: 0 60px;
     text-decoration: none;
     font-size: 0.8rem;
     font-weight: 100;
   }
 
-  /* .link a:active {
-    text-decoration: underline;
-  } */
+  .active {
+    border-bottom: 5px solid white;
+  }
 }

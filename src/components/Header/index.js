@@ -28,7 +28,7 @@ class Header extends React.Component {
             className="sidebar"
             sidebar={
               <div className="navLinks">
-                <NavLink className="link" to="/">
+                <NavLink exact className="link" to="/">
                   FILMES NÃO CURADOS
                 </NavLink>
                 <NavLink className="link" to="/LikedMovies">
@@ -65,7 +65,7 @@ class Header extends React.Component {
             <img className="logo" src={logo} alt="viva decora logo" />
           </div>
           <div className="navLinks">
-            <NavLink className="link" to="/">
+            <NavLink exact className="link" to="/">
               FILMES NÃO CURADOS
             </NavLink>
             <NavLink className="link" to="/LikedMovies">
