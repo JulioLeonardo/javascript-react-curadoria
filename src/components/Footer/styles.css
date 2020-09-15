@@ -3,15 +3,21 @@
 }
 
 @media only screen and (min-width: 321px) {
+  .content-wraper {
+    padding-bottom: 2.5rem;
+  }
+
   .footer {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #4e4e4e;
-    height: 35px;
-    width: 100vw;
-    position: absolute;
+    height: 2.5rem;
+    width: 100%;
+    position: fixed;
+    right: 0;
     bottom: 0;
+    left: 0;
   }
 
   .footer img {

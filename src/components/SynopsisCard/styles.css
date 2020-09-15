@@ -1,37 +1,36 @@
-
 #synopsis-card {
   height: 100vh;
-    width: 100vw;
-    background-color: #0e0a149f;
-    position: fixed;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
+  width: 100vw;
+  background-color: #0e0a149f;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
 
-    animation: fadeInFromNone 0.3s ease-in;
+  animation: fadeInFromNone 0.3s ease-in;
 }
 
 @keyframes fadeInFromNone {
   0% {
-      display: none;
-      opacity: 0;
+    display: none;
+    opacity: 0;
   }
 
   1% {
-      display: block;
-      opacity: 0;
+    display: block;
+    opacity: 0;
   }
 
   100% {
-      display: block;
-      opacity: 1;
+    display: block;
+    opacity: 1;
   }
 }
 
 .content-top {
-  background-color: #FF5656;
+  background-color: #ff5656;
   width: 305px;
   height: 530px;
   border-radius: 8px;
@@ -75,7 +74,7 @@
   font-size: 1.5rem;
 }
 
-.content-main .synopsis-info { 
+.content-main .synopsis-info {
   text-align: center;
   max-width: 260px;
   margin: auto;
@@ -85,6 +84,7 @@
 }
 
 .content-main .hearts {
+  display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
@@ -99,7 +99,7 @@
 }
 
 .black {
-  filter: invert(100%)
+  filter: invert(100%);
 }
 
 .content-main .synopsis-reviews {
@@ -120,3 +120,17 @@
   line-height: 20px;
 }
 
+@media only screen and (min-width: 321px) {
+  .content-top {
+    width: 700px;
+  }
+
+  .content-main .synopsis-info {
+    max-width: 650px;
+  }
+
+  .content-main .synopsis-content {
+    margin-top: 20px;
+    max-width: 650px;
+  }
+}

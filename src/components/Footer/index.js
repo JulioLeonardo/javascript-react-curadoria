@@ -9,12 +9,14 @@ import google from '../../assets/images/google-plus.svg';
 
 function Footer() {
   return (
-    <footer className="footer">
-      <img src={facebook} alt="facebook" />
-      <img src={instagram} alt="instagram" />
-      <img src={pinterest} alt="pinterest" />
-      <img src={google} alt="google-plus" />
-    </footer>
+    <div className="content-wraper">
+      <footer className="footer">
+        <img src={facebook} alt="facebook" />
+        <img src={instagram} alt="instagram" />
+        <img src={pinterest} alt="pinterest" />
+        <img src={google} alt="google-plus" />
+      </footer>
+    </div>
   );
 }
 

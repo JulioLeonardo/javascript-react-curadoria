@@ -15,10 +15,52 @@
   max-width: 145px;
 }
 
+.mini-card-reviews {
+  display: none;
+}
+
+.mini-card-synopsis {
+  display: none;
+}
+
 @media only screen and (min-width: 321px) {
   .mini-movie-card {
     width: 294px !important;
     height: 350px !important;
     margin-bottom: 50px !important;
+  }
+
+  .mini-card-title {
+    max-width: 300px;
+    font-size: 1.3rem;
+  }
+
+  .mini-card-reviews {
+    display: initial;
+    color: white;
+    font-size: 0.8rem;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  .hearts {
+    margin-left: 10px;
+  }
+
+  .hearts-reviews {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mini-card-synopsis {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+
+  .mini-card-synopsis p {
+    color: white;
   }
 }
