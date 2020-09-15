@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import './styles.css';
 import Header from '../../components/Header';
 import MovieList from '../../components/MovieList';
+import Footer from '../../components/Footer';
 
 function Disliked({ disliked }) {
   console.log(disliked);
@@ -12,6 +13,7 @@ function Disliked({ disliked }) {
     <div id="disliked-movies">
       <Header />
       <MovieList movies={disliked} title="FILMES NÃO CURTIDOS" />
+      <Footer />
     </div>
   );
 }
@@ -19,6 +21,5 @@ function Disliked({ disliked }) {
 const mapStateToProps = (state) => ({
   disliked: state.handleMovies.disliked,
 });
-
 
 export default connect(mapStateToProps)(Disliked);

@@ -5,13 +5,15 @@ import { connect } from 'react-redux';
 import './styles.css';
 import Header from '../../components/Header';
 import MovieList from '../../components/MovieList';
+import Footer from '../../components/Footer';
 
 function LikedMovies({ liked }) {
-  console.log(liked)
+  console.log(liked);
   return (
     <div id="liked-movies">
       <Header />
       <MovieList movies={liked} title="FILMES CURTIDOS" />
+      <Footer />
     </div>
   );
 }
