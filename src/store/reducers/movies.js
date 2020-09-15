@@ -20,8 +20,10 @@ function handleMovies(state = INITIAL_STATE, action) {
 
     case 'SET_JUMPED':
       return {
+        ...state,
         movies: state.movies.filter((movie) => movie.id !== action.data.id),
       };
+
     case 'SET_DISLIKED':
       return {
         ...state,
