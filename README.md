@@ -7,7 +7,7 @@
 </p>
 
 <h1 align="center">
- <a href="#recursos">Recursos</a> •
+ <a href="#capturas">Capturas</a> •
  <a href="#roadmap">Roadmap</a> • 
  <a href="#tecnologias">Tecnologias</a> • 
  <a href="#contribuicao">Contribuição</a> • 
@@ -19,8 +19,18 @@
 	Projeto em produção pelo Netlify em: <a href="silly-pare-c55a4b.netlify.app" target="_blank">Curadoria de Filmes - Viva Decora</a>  
 </h4>
 
-<h3 id="features>Recursos</h3>
+# Recursos
 
 - [x] Lista filmes da API The Movies Database
 - [x] Possibilita curtir, pular e não curtir os filmes
 - [x] Possui páginas que listam os filmes curtidos e não curtidos
+
+<h1 id="capturas">
+	Capturas de Tela
+</h1>
+<h1 align="center" >
+  <img alt="home-mobile" title="home-mobile" src="./src/assets/screenshots/home-mobile.PNG" />
+  <img alt="home-mobile" title="home-mobile" src="./src/assets/screenshots/list-mobile.PNG" />
+  <img alt="home-mobile" title="home-mobile" src="./src/assets/screenshots/sy-modal-mobile.PNG" />
+  <img alt="home-mobile" title="home-mobile" src="./src/assets/screenshots/no-movies-mobile.PNG" />
+</h1>
