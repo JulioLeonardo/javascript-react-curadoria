@@ -27,6 +27,11 @@
 }
 
 @media only screen and (min-width: 321px) {
+  .movie-list {
+    margin: auto auto;
+    width: 1000px;
+  }
+
   .container {
     grid-template-columns: 1fr 1fr 1fr;
   }

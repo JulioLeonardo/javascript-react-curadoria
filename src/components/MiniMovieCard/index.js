@@ -1,18 +1,10 @@
 import React from 'react';
 
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-
-import * as SynopsisActions from '../../store/actions/synopsis';
-
 import './styles.css';
 import HeartsContainer from '../HeartsContainer';
 import SynopsisCard from '../SynopsisCard';
 
-function MiniMovieCard({ toggleSynopsis, movie }) {
-  const handleShowSynopsis = () => {
-    toggleSynopsis(true);
-  };
+function MiniMovieCard({ movie }) {
   const bgImage = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
   const background = {
     backgroundImage:
@@ -46,7 +38,7 @@ function MiniMovieCard({ toggleSynopsis, movie }) {
       </div>
       <div className="mini-card-synopsis">
         <p>{shortSynopsis}...</p>
-        <button type="button" onClick={handleShowSynopsis} id="show-synopsis">
+        <button type="button" id="show-synopsis">
           Ver Sinopse
         </button>
       </div>
@@ -64,12 +56,4 @@ function MiniMovieCard({ toggleSynopsis, movie }) {
   );
 }
 
-const mapStateToProps = (state) => ({
-  isSynopsisActive: state.synopsis.isSynopsisActive,
-  movies: state.handleMovies.movies,
-});
-
-const mapDispatchToProps = (dispatch) =>
-  bindActionCreators(SynopsisActions, dispatch);
-
-export default connect(mapStateToProps, mapDispatchToProps)(MiniMovieCard);
+export default MiniMovieCard;
