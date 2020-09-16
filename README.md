@@ -98,6 +98,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Redux](https://redux.js.org/)
 - [React-Redux](https://react-redux.js.org/)
 - [React-Sidebar](https://www.npmjs.com/package/react-sidebar)
+- [ESLint - Airbnb Styleguide](https://eslint.org/)
+- [Prettier](https://prettier.io/)
 - [Axios](https://github.com/axios/axios)
 
 <h1 id="autor">
