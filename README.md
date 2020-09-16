@@ -35,10 +35,10 @@
 </h4>
 
 <h1 align="center" >
-  <img alt="home-mobile" title="home-mobile" src="./src/assets/screenshots/home-mobile.PNG" height="400" />
-  <img alt="list-mobile" title="list-mobile" src="./src/assets/screenshots/list-mobile.PNG" height="400" />
-  <img alt="synopsis-modal-mobile" title="synopsis-modal-mobile" src="./src/assets/screenshots/sy-modal-mobile.PNG" height="400" />
-  <img alt="no-movies-mobile" title="no-movies-mobile" src="./src/assets/screenshots/no-movies-mobile.PNG" height="400" />
+  <img alt="home-mobile" title="home-mobile" src="./src/assets/screenshots/home-mobile.PNG" height="350" />
+  <img alt="list-mobile" title="list-mobile" src="./src/assets/screenshots/list-mobile.PNG" height="350" />
+  <img alt="synopsis-modal-mobile" title="synopsis-modal-mobile" src="./src/assets/screenshots/sy-modal-mobile.PNG" height="350" />
+  <img alt="no-movies-mobile" title="no-movies-mobile" src="./src/assets/screenshots/no-movies-mobile.PNG" height="350" />
 </h1>
 
 <h4>
@@ -46,10 +46,10 @@
 </h4>
 
 <h1 align="center" >
-  <img alt="home" title="home" src="./src/assets/screenshots/home.PNG" height="300" />
-  <img alt="list" title="list" src="./src/assets/screenshots/list.PNG" height="300" />
-  <img alt="synopsis" title="synopsis" src="./src/assets/screenshots/sy-modal.PNG" height="300" />
-  <img alt="no-movies" title="no-movies" src="./src/assets/screenshots/no-movies.PNG" height="300" />
+  <img alt="home" title="home" src="./src/assets/screenshots/home.PNG" height="250" />
+  <img alt="list" title="list" src="./src/assets/screenshots/list.PNG" height="250" />
+  <img alt="synopsis" title="synopsis" src="./src/assets/screenshots/sy-modal.PNG" height="250" />
+  <img alt="no-movies" title="no-movies" src="./src/assets/screenshots/no-movies.PNG" height="250" />
 </h1>
 
 <h1 id="requisitos">
@@ -114,3 +114,13 @@ Feito com ❤️ por Julio Leonardo 👋🏽 Entre em contato!
 
 [![Linkedin Badge](https://img.shields.io/badge/-Julio-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/JulioLeonardoCarvalho/)](https://www.linkedin.com/in/JulioLeonardoCarvalho/) 
 [![Gmail Badge](https://img.shields.io/badge/-juleolica@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:juleolica@gmail.com)](mailto:juleolica@gmail.com)
+
+<h1 id="licenc-a">
+	Licença
+</h1>
+
+<img src="https://img.shields.io/badge/license-MIT-green" alt="lcense"/>
+
+
+
+
