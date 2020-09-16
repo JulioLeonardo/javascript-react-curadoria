@@ -34,10 +34,10 @@
 </h4>
 
 <h1 align="center" >
-  <img alt="home-mobile" title="home-mobile" src="./src/assets/screenshots/home-mobile.PNG" />
-  <img alt="home-mobile" title="home-mobile" src="./src/assets/screenshots/list-mobile.PNG" />
-  <img alt="home-mobile" title="home-mobile" src="./src/assets/screenshots/sy-modal-mobile.PNG" />
-  <img alt="home-mobile" title="home-mobile" src="./src/assets/screenshots/no-movies-mobile.PNG" />
+  <img alt="home-mobile" title="home-mobile" src="./src/assets/screenshots/home-mobile.PNG" height="400" />
+  <img alt="home-mobile" title="home-mobile" src="./src/assets/screenshots/list-mobile.PNG" height="400" />
+  <img alt="home-mobile" title="home-mobile" src="./src/assets/screenshots/sy-modal-mobile.PNG" height="400" />
+  <img alt="home-mobile" title="home-mobile" src="./src/assets/screenshots/no-movies-mobile.PNG" height="400" />
 </h1>
 
 <h4>
@@ -45,8 +45,8 @@
 </h4>
 
 <h1 align="center" >
-  <img alt="home-mobile" title="home-mobile" src="./src/assets/screenshots/home.PNG" />
-  <img alt="home-mobile" title="home-mobile" src="./src/assets/screenshots/list.PNG" />
-  <img alt="home-mobile" title="home-mobile" src="./src/assets/screenshots/sy-modal.PNG" />
-  <img alt="home-mobile" title="home-mobile" src="./src/assets/screenshots/no-movies.PNG" />
+  <img alt="home-mobile" title="home-mobile" src="./src/assets/screenshots/home.PNG" height="300" />
+  <img alt="home-mobile" title="home-mobile" src="./src/assets/screenshots/list.PNG" height="300" />
+  <img alt="home-mobile" title="home-mobile" src="./src/assets/screenshots/sy-modal.PNG" height="300" />
+  <img alt="home-mobile" title="home-mobile" src="./src/assets/screenshots/no-movies.PNG" height="300" />
 </h1>
