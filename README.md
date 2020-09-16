@@ -7,7 +7,7 @@
 </p>
 
 <h1 align="center">
- <a href="#objetivo">Objetivo</a> •
+ <a href="#recursos">Recursos</a> •
  <a href="#roadmap">Roadmap</a> • 
  <a href="#tecnologias">Tecnologias</a> • 
  <a href="#contribuicao">Contribuição</a> • 
@@ -18,3 +18,9 @@
 <h4 align="center"> 
 	Projeto em produção pelo Netlify em: <a href="silly-pare-c55a4b.netlify.app" target="_blank">Curadoria de Filmes - Viva Decora</a>  
 </h4>
+
+<h3 id="features>Recursos</h3>
+
+- [x] Lista filmes da API The Movies Database
+- [x] Possibilita curtir, pular e não curtir os filmes
+- [x] Possui páginas que listam os filmes curtidos e não curtidos
