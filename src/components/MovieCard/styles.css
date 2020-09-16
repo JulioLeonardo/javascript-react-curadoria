@@ -113,5 +113,6 @@
 @media only screen and (min-height: 800px) {
   #movie-card {
     margin-top: 3rem;
+    margin-bottom: 2rem;
   }
 }
