@@ -8,7 +8,7 @@
   grid-template-columns: 1fr 1fr;
 }
 
-.movie-list img {
+.movie-list .camera-no-movie {
   display: block;
   padding-top: 10px;
   margin: auto auto;

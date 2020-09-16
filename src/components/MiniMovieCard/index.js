@@ -38,19 +38,16 @@ function MiniMovieCard({ movie }) {
       </div>
       <div className="mini-card-synopsis">
         <p>{shortSynopsis}...</p>
-        <button type="button" id="show-synopsis">
-          Ver Sinopse
-        </button>
-      </div>
-      <div className="mini-card-synopsis-card">
-        <SynopsisCard
-          image={bgImage}
-          title={title}
-          year={year}
-          stars={stars}
-          synopsis={synopsis}
-          reviews={movie.vote_count}
-        />
+        <div className="mini-card-synopsis-card">
+          <SynopsisCard
+            image={bgImage}
+            title={title}
+            year={year}
+            stars={stars}
+            synopsis={synopsis}
+            reviews={movie.vote_count}
+          />
+        </div>
       </div>
     </div>
   );

@@ -8,7 +8,9 @@
   justify-content: center;
   align-items: center;
   z-index: 2;
-
+  color: #666666;
+  left: 0;
+  margin: auto;
   animation: fadeInFromNone 0.3s ease-in;
 }
 
@@ -94,7 +96,7 @@
 
 .content-main .hearts img {
   width: 20px;
-  height: 20px;
+  height: 20px !important;
   margin: 5px;
 }
 
@@ -111,6 +113,10 @@
   font-weight: 700;
 }
 
+.content-main .synopsis-reviews p {
+  margin: auto;
+}
+
 .content-main .synopsis-content {
   max-width: 260px;
   text-align: left;
@@ -120,9 +126,15 @@
   line-height: 20px;
 }
 
+.content-main .synopsis-content p {
+  max-width: 260px;
+  margin: auto;
+}
+
 @media only screen and (min-width: 321px) {
   .content-top {
     width: 700px;
+    padding-top: 10px;
   }
 
   .content-main .synopsis-info {
@@ -132,5 +144,15 @@
   .content-main .synopsis-content {
     margin-top: 20px;
     max-width: 650px;
+  }
+
+  .content-main .synopsis-content p {
+    max-width: 600px;
+    color: #666666;
+  }
+
+  .content-main .synopsis-reviews p {
+    margin: auto;
+    color: #666666;
   }
 }

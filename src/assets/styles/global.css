@@ -16,3 +16,12 @@ body,
   position: relative;
   min-height: 100vh;
 }
+
+button {
+  outline: none;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}

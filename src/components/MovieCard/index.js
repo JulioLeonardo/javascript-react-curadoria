@@ -14,10 +14,6 @@ import HeartsContainer from '../HeartsContainer';
 
 // eslint-disable-next-line react/prop-types
 function MovieCard({ toggleSynopsis, movies }) {
-  const handleShowSynopsis = () => {
-    toggleSynopsis(true);
-  };
-
   if (movies.length === 0 || undefined) {
     return (
       <div className="no-movie-div">
@@ -59,19 +55,16 @@ function MovieCard({ toggleSynopsis, movies }) {
         </p>
         <div className="synopsis">
           <p>{shortSynopsis}...</p>
-          <button type="button" onClick={handleShowSynopsis} id="show-synopsis">
-            Ver Sinopse
-          </button>
+          <SynopsisCard
+            image={bgImage}
+            title={title}
+            year={year}
+            stars={stars}
+            synopsis={synopsis}
+            reviews={reviews}
+          />
         </div>
       </div>
-      <SynopsisCard
-        image={bgImage}
-        title={title}
-        year={year}
-        stars={stars}
-        synopsis={synopsis}
-        reviews={reviews}
-      />
       <ButtonGroup />
     </>
   );
