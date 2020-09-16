@@ -63,4 +63,16 @@
   .mini-card-synopsis p {
     color: white;
   }
+
+  #synopsis-card {
+    right: 0;
+  }
+
+  .mini-card-synopsis-card .content-main {
+    height: 460px;
+  }
+
+  .mini-card-synopsis-card .hearts img {
+    height: 30px;
+  }
 }

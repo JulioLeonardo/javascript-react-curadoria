@@ -50,7 +50,16 @@ function MiniMovieCard({ toggleSynopsis, movie }) {
           Ver Sinopse
         </button>
       </div>
-      <SynopsisCard />
+      <div className="mini-card-synopsis-card">
+        <SynopsisCard
+          image={bgImage}
+          title={title}
+          year={year}
+          stars={stars}
+          synopsis={synopsis}
+          reviews={movie.vote_count}
+        />
+      </div>
     </div>
   );
 }

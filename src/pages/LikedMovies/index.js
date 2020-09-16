@@ -8,7 +8,6 @@ import MovieList from '../../components/MovieList';
 import Footer from '../../components/Footer';
 
 function LikedMovies({ liked }) {
-  console.log(liked);
   return (
     <div id="liked-movies">
       <Header />
