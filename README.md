@@ -113,4 +113,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
 Feito com ❤️ por Julio Leonardo 👋🏽 Entre em contato!
 
 [![Linkedin Badge](https://img.shields.io/badge/-Julio-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/JulioLeonardoCarvalho/)](https://www.linkedin.com/in/JulioLeonardoCarvalho/) 
-[![Gmail Badge](https://img.shields.io/badge/-juleolica@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:juleolica@gmail.com)](mailto:tgmarinho@gmail.com)
+[![Gmail Badge](https://img.shields.io/badge/-juleolica@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:juleolica@gmail.com)](mailto:juleolica@gmail.com)
