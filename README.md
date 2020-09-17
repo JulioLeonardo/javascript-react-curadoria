@@ -95,6 +95,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 - [JavaScript](https://www.ecma-international.org/publications/standards/Ecma-006.htm)
 - [React](https://pt-br.reactjs.org/)
+- [React Router](https://reactrouter.com/web/guides/quick-start)
 - [Redux](https://redux.js.org/)
 - [React-Redux](https://react-redux.js.org/)
 - [React-Sidebar](https://www.npmjs.com/package/react-sidebar)
