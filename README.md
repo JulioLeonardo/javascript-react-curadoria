@@ -17,7 +17,7 @@
 </h1>
 
 <h4 align="center"> 
-	Projeto em produção pelo Netlify em: <a href="silly-pare-c55a4b.netlify.app" target="_blank">Curadoria de Filmes - Viva Decora</a>  
+	Projeto em produção pelo Netlify em: <a href="https://silly-pare-c55a4b.netlify.app" target="_blank">Curadoria de Filmes - Viva Decora</a>  
 </h4>
 
 # Recursos
